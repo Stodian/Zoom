@@ -5,13 +5,13 @@ import pyautogui
 
 def open_zoom_and_join_meeting():
     try:
-        # Replace "C:\Users\ethan\Pictures\Screenshots\join_button.png" 
+        # Replace "C:\path\to\join_button.png" 
         # with the full path to the image file on your system
-        image_path = r"C:\Users\ethan\Pictures\Screenshots\join_button.png"
+        image_path = r"C:\path\to\join_button.png"
         
-        # Replace "C:\Users\ethan\AppData\Roaming\Zoom\bin\Zoom.exe" 
+        # Replace "C:\path\to\Zoom.exe" 
         # with the actual path to the Zoom app executable on your system
-        zoom_app_path = r"C:\Users\ethan\AppData\Roaming\Zoom\bin\Zoom.exe"
+        zoom_app_path = r"C:\path\to\Zoom.exe"
         
         # Open the Zoom app
         subprocess.Popen(zoom_app_path)
@@ -29,7 +29,7 @@ def open_zoom_and_join_meeting():
         time.sleep(1)  # Adjust the delay if needed
         
         # Enter the Zoom room ID
-        zoom_room_id = "78562390177"  # Replace with your Zoom room ID
+        zoom_room_id = "place.zoom.id.here"  # Replace with your Zoom room ID
         pyautogui.write(zoom_room_id)
         pyautogui.press('enter')
         
@@ -37,7 +37,7 @@ def open_zoom_and_join_meeting():
         time.sleep(1)  # Adjust the delay if needed
         
         # Enter the meeting password
-        meeting_password = "2014"  # Replace with your meeting password
+        meeting_password = "place.password.here"  # Replace with your meeting password
         pyautogui.typewrite(meeting_password, interval=0.1)  # Adjust the interval if needed
         pyautogui.press('enter')
         
@@ -46,3 +46,4 @@ def open_zoom_and_join_meeting():
 
 # Call the function directly to join the meeting when the script is run
 open_zoom_and_join_meeting()
+
